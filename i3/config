@@ -160,7 +160,9 @@ bindsym mod+r mode "resize"
 ipc-socket ~/.i3/ipc.sock
 
 exec xrandr --output VGA-0 --auto --left-of DVI-0
-exec i3status | i3-wsbar -c "dzen2 -x %x -dock -fn -*-profont-*-*-*-*-11-*-*-*-*-*-*-* -ta l"
+#exec i3status | i3-wsbar -c "dzen2 -x %x -dock -fn -*-profont-*-*-*-*-11-*-*-*-*-*-*-* -ta l"
+#i3status -c ~/.config/i3status/config | i3-wsbar --output-on "VGA-0" --show-all -c "dzen2 -ta l"
+i3status -c ~/.config/i3status/config | i3-wsbar -c "dzen2 -ta l"
 exec dmenu
 exec chromium-browser
 #exec xmessage -file /etc/i3/welcome
